@@ -202,7 +202,7 @@ function handleContactForm(form) {
 
     var formData = new FormData(form);
     formData.append('_captcha', 'false');
-    formData.append('_subject', 'New message contactform blomdaele.be');
+    formData.append('_subject', 'Nieuw bericht van blomdaele.be contactformulier');
     formData.delete('privacy');
 
     var btn = form.querySelector('button[type="submit"]');
@@ -210,28 +210,31 @@ function handleContactForm(form) {
 
     fetch(endpoint, {
         method:  'POST',
-        headers: { 'Accept': 'application/json' },
-        body:    formData
+        headers: { 
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(formData)
     })
     .then(function (res) {
-        return res.json().catch(function () { return null; }).then(function (body) {
-            return { ok: res.ok, body: body };
-        });
-    })
-    .then(function (result) {
-        var isSuccess = result.ok;
-        if (result.body && Object.prototype.hasOwnProperty.call(result.body, 'success')) {
-            isSuccess = result.body.success === true || result.body.success === 'true';
+        if (!res.ok) {
+            throw new Error('HTTP ' + res.status);
         }
-
+        return res.json();
+    })
+    .then(function (data) {
+        var isSuccess = (data && (data.success === 'true' || data.success === true));
+        
         if (isSuccess) {
             showFormAlert(form, msgs.success, 'success');
             form.reset();
         } else {
-            showFormAlert(form, msgs.error, 'error');
+            var errorMsg = (data && data.message) ? data.message : msgs.error;
+            showFormAlert(form, errorMsg, 'error');
         }
     })
-    .catch(function () {
+    .catch(function (err) {
+        console.error('Contact form error:', err);
         showFormAlert(form, msgs.error, 'error');
     })
     .finally(function () {
