@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bed &amp; breakfast Blomdaele | Brugge</title>
+    <meta name="description" content="Neem contact op met B&amp;B Blomdaele in Brugge.">
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <ul class="lang-nav"><li><a href="contact.html" class="active">NL</a><span class="divider">/</span></li><li><a href="fr/contact.html">FR</a><span class="divider">/</span></li><li><a href="en/contact.html">EN</a></li></ul>
+        <div class="header-inner">
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+            <nav><ul class="main-nav"><li><a href="index.html">HOME</a></li><li><a href="bb.html">B&amp;B</a></li><li><a href="rooms.html">KAMERS</a></li><li class="logo-wrapper"><a href="index.html"><img src="images/logo/logo.png" alt="Blomdaele B&amp;B" loading="lazy"></a></li><li><a href="reviews.html">REVIEWS</a></li><li><a href="photos.html">FOTOS</a></li><li><a href="contact.html" class="active">CONTACT</a></li></ul></nav>
+        </div>
+        <nav class="mobile-nav"><a href="index.html">Home</a><a href="bb.html">B&amp;B</a><a href="rooms.html">Kamers</a><a href="reviews.html">Reviews</a><a href="photos.html">Fotos</a><a href="contact.html">Contact</a><a href="https://reservations.cubilis.eu/3885/Rooms/Select" class="mobile-book-btn">Online Reserveren</a></nav>
+    </div>
+</header>
+
+<section class="page-content">
+    <div class="container">
+        <div class="contact-wrapper">
+            <h3 style="font-family:var(--font-heading);letter-spacing:1px;margin-bottom:25px;">Contacteer ons</h3>
+            <form id="contactForm" onsubmit="return handleContactForm(this);">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="lastname">Naam</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Naam" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Voornaam</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Emailadres</label>
+                        <input type="email" id="email" name="email" placeholder="Emailadres" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telefoonnummer</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Telefoonnummer">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message" placeholder="Bericht" required></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Ik heb de <a href="privacy.html">privacyverklaring</a> gelezen en goedgekeurd</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">VERSTUUR</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div><h2>Bed &amp; breakfast Blomdaele</h2><p>Beenhouwersstraat 15</p><p>8000 Brugge, België</p><ul><li><a href="mailto:info@blomdaele.be">info@blomdaele.be</a></li><li>0476 48 19 69</li></ul></div>
+            <div><h2>Reviews</h2><p>No reviews yet</p></div>
+            <div><h2>Social media</h2><a href="https://www.facebook.com/blomdaele" class="social-link" target="_blank" rel="noopener"><img src="images/icons/fb-link.png" alt="Facebook" loading="lazy"> Facebook</a></div>
+        </div>
+        <div class="horline" style="background:rgba(255,255,255,0.1)"></div>
+        <div class="footer-bottom">
+            <ul class="footer-nav"><li><a href="index.html">Home</a><span class="divider"> / </span></li><li><a href="bb.html">B&amp;B</a><span class="divider"> / </span></li><li><a href="rooms.html">Kamers</a><span class="divider"> / </span></li><li><a href="reviews.html">Reviews</a><span class="divider"> / </span></li><li><a href="photos.html">Fotos</a><span class="divider"> / </span></li><li><a href="contact.html">Contact</a></li></ul>
+            <div><ul class="footer-nav"><li><a href="privacy.html">Privacybeleid</a><span class="divider"> / </span></li><li><a href="terms.html">Voorwaarden</a></li></ul><span class="footer-credit"><a href="https://www.vipersoft.be">webhosting by vipersoft</a></span></div>
+        </div>
+    </div>
+</footer>
+
+<div class="cookie-banner"><img src="images/logo/logo.png" alt="Blomdaele" class="logo" loading="lazy"><h2>Wij maken gebruik van cookies om uw gebruikservaring te verbeteren.</h2><div class="cookie-buttons"><a href="#" class="cookie-btn">Toestemming intrekken</a><a href="#" class="cookie-btn accept">Alle cookies accepteren</a></div><div class="cookie-links"><a href="privacy.html">Privacybeleid</a> | <a href="terms.html">Voorwaarden</a></div></div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

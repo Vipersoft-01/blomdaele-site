@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "CocoSharpS";
+    src: url(../fonts/CocoSharpS-Bold.otf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "CocoSharpS";
+    src: url(../fonts/CocoSharp_Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'museo_sans100';
+    src: url(../fonts/museosans-100-webfont.woff) format("woff"),
+         url(../fonts/museosans-100-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url(../fonts/museosans_500-webfont.woff) format("woff"),
+         url(../fonts/museosans_500-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans700';
+    src: url(../fonts/museosans_700-webfont.woff) format("woff"),
+         url(../fonts/museosans_700-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cinzelregular';
+    src: url(../fonts/cinzel-regular-webfont.woff) format("woff"),
+         url(../fonts/cinzel-regular-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
