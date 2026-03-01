@@ -198,7 +198,7 @@ function handleContactForm(form) {
 
     var endpoint = form.getAttribute('data-endpoint') ||
         window.BLOMDAELE_CONTACT_ENDPOINT ||
-        'https://formsubmit.co/ajax/info@blomdaele.be';
+        'https://formsubmit.co/ajax/michaelbracke@hotmail.com';
 
     var formData = new FormData(form);
     formData.append('_captcha', 'false');
