@@ -25,8 +25,11 @@ jobs:
       - name: Prepare static artifact
         run: |
           mkdir -p _site
-          cp -R . _site/
-          rm -rf _site/.git _site/.github _site/_site
+          rsync -av --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '_site' \
+            ./ _site/
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
