@@ -214,7 +214,17 @@ function handleContactForm(form) {
         body:    formData
     })
     .then(function (res) {
-        if (res.ok) {
+        return res.json().catch(function () { return null; }).then(function (body) {
+            return { ok: res.ok, body: body };
+        });
+    })
+    .then(function (result) {
+        var isSuccess = result.ok;
+        if (result.body && Object.prototype.hasOwnProperty.call(result.body, 'success')) {
+            isSuccess = result.body.success === true || result.body.success === 'true';
+        }
+
+        if (isSuccess) {
             showFormAlert(form, msgs.success, 'success');
             form.reset();
         } else {
